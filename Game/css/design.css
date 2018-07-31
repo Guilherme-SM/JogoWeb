@@ -1,0 +1,98 @@
+#ceu {
+	padding: 1em;
+	background-color: #00C6DA;
+	font-family: verdana;
+	text-align: center;
+	font-size: 16px;
+	color: white;
+}
+#diploma {
+	padding: 1em;
+	background-color: white;
+	border: 12px double #090c86;
+	font-family: gothicE;
+	text-align: center;
+	font-size: 32px;
+	color: black;
+	font-weight: bold;
+	margin-left: auto;
+	margin-right: auto;
+}
+#form {
+	padding: 1em;
+	font-family: bankgothic Md BT;
+	text-align: center;
+	font-size: 18px;
+	color: #fff;
+	margin-left: auto;
+	margin-right: auto;
+}
+#player {
+	background-color: black;
+	border: 2px solid gray;
+	border-radius: 100px;
+	width: 45px;
+	height: 45px;
+	text-align: center;
+	
+}
+
+#tiro {
+	background-color: yellow;
+	border: 0px;
+	border-radius: 100px;
+	width: 75px;
+	height: 6px;
+	text-align: center;
+}
+
+#energia {
+	background-color: #12CD12;
+	border: 2px solid black;
+	border-radius: 2px;
+	width: 100px;
+	height: 10px;
+	text-align: center;
+}
+
+#inimigo {
+	background-color: red;
+	border: 2px solid #111;
+	border-radius: 100px;
+	width: 45px;
+	height: 45px;
+	text-align: center;
+}
+#inimigo2 {
+	background-color: #AA0000;
+	color: #00C200;
+	border: 2px solid #111;
+	border-radius: 100px;
+	width: 55px;
+	height: 55px;
+	text-align: center;
+}
+
+/* Planos de Fundo */
+.bg {
+	background-color: black;
+}
+.game {
+	background-color: #478617;
+	width: 700px;
+	height: 525px;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+/* Tags Customizadas - ZONA DE PERIGO */
+titulo {
+	background-color: #D63665;
+	font-size: 25px;
+	color: white;
+	width: 700px;
+	height: 185px;
+	font-family: verdana;
+	margin-left: auto;
+	margin-right: auto;
+}
