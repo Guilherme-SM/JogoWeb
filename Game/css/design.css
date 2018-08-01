@@ -12,7 +12,7 @@
 	padding: 1em;
 	background-color: #000000AA;
 	border: 12px double #090c86AA;
-	font-family: gothicE;
+	font-family: gothicI;
 	text-align: center;
 	font-size: 32px;
 	color: #F90;
@@ -32,7 +32,7 @@
 }
 #player {
 	background-image: url(../img/jogador1.png);
-	width: 90px;
+	width: 105px;
 	height: 30px;
 	text-align: center;
 	position: absolute;
@@ -73,7 +73,7 @@
 	text-align: center;
 	position: absolute;
 	top: 370px;
-	left: 393px;
+	left: 405px;
 }
 #inimigo {
 	background-image: url(../img/inimigo1.png);
@@ -96,6 +96,16 @@
 #placar {
 	border:;
 }
+#explosao {
+	background-image: url(../img/explosao.jpg);
+	border-radius: 100px;
+	width: 42px;
+	height: 42px;
+	text-align: center;
+	position: absolute;
+	top: 600px;
+	left: 652px;
+}
 
 /* Tutorial */
 
@@ -105,11 +115,12 @@
 
 /* Planos de Fundo */
 .bg {
-	background-image: url(../img/fundo.png);
+	background-image: url(../img/galaxia.jpg);
 	background-size: cover;
 }
 .game {
-	background-image: url(../img/fundo_game.png);
+	background-image: url(../img/universo.jpg);
+	background-size: cover;
 	width: 700px;
 	height: 525px;
 	margin-left: auto;
@@ -117,13 +128,19 @@
 }
 
 /* Tags Customizadas - ZONA DE PERIGO */
+
+@font-face{
+	font-family: titulo;
+	src:url(../font/motherland.ttf);
+}
+
 titulo {
 	padding: 2px;
-	font-size: 25px;
-	color: white;
+	font-size: 36px;
+	color: red;
 	width: 700px;
 	height: 185px;
-	font-family: verdana;
+	font-family: titulo;
 	margin-left: auto;
 	margin-right: auto;
 }
