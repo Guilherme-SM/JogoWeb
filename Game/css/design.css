@@ -130,7 +130,7 @@
 /* Tags Customizadas - ZONA DE PERIGO */
 
 @font-face{
-	font-family: titulo;
+	font-family: motherland;
 	src:url(../font/motherland.ttf);
 }
 
@@ -140,7 +140,7 @@ titulo {
 	color: red;
 	width: 700px;
 	height: 185px;
-	font-family: titulo;
+	font-family: motherland;
 	margin-left: auto;
 	margin-right: auto;
 }
