@@ -115,11 +115,11 @@
 
 /* Planos de Fundo */
 .bg {
-	background-image: url(../img/galaxia.jpg);
+	background-image: url(../img/universo.jpg);
 	background-size: cover;
 }
 .game {
-	background-image: url(../img/universo.jpg);
+	background-image: url(../img/galaxia.jpg);
 	background-size: cover;
 	width: 700px;
 	height: 525px;

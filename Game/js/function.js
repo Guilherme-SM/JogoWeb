@@ -9,6 +9,8 @@ $(document).ready(function() {
 	$("#laser").hide();
 	$("#escudos").hide();
 });
+var velocidade = 5;
+var positionY = parseInt(Math.random()*410);
 
 var TECLA = {
 	W:87,
@@ -18,7 +20,7 @@ var TECLA = {
 	barra:32
 }
 
-var jogo = {W:87};
+var jogo = {};
 jogo.press = [];
 
 $(function() {
@@ -37,6 +39,9 @@ $(function() {
 
 function loop() {
 	movimento();
+	moveFundo();
+	inimigo();
+	inimigo2();
 }
 function movimento() {
 
@@ -66,37 +71,31 @@ function movimento() {
  	}
 }
 
-// $(function() {
-	
-// 	$(document).keydown(function(e){
-// 		switch(e.which){
-			
-// 			case TECLA.W:
+function moveFundo() {
+	posicao = parseInt($(".game").css("background-position"));
+	$(".game").css("background-position",posicao-1);
+}
 
-// 				var topo = parseInt($("#player").css("top"));
-// 				$("#player").css("top",topo-2);break;
+function inimigo() {
+	posicaoX = parseInt($("#inimigo").css("left"));
+	$("#inimigo").css("left",posicaoX-5);
 
-// 			case TECLA.S:
+	if (posicaoX <= 0) {
+		posicaoY1 = parseInt(Math.random()*410);
+		$("#inimigo").css("left",1050);
+		$("#inimigo").css("top",posicaoY1);
+	}
 
-// 				var desce = parseInt($("#player").css("top"));
-// 				$("#player").css("top",desce+10);break;
+}
 
-// 			case TECLA.D:
+function inimigo2() {
+	posicaoX = parseInt($("#inimigo2").css("left"));
+	$("#inimigo2").css("left",posicaoX-8);
 
-// 				var acelera = parseInt($("#player").css("left"));
-// 				$("#player").css("left",acelera+10);break;
+	if (posicaoX <= 0) {
+		posicaoY2 = parseInt(Math.random()*410);
+		$("#inimigo2").css("left",1050);
+		$("#inimigo2").css("top",posicaoY2);
+	}
 
-// 			case TECLA.A:
-
-// 				var recua = parseInt($("#player").css("left"));
-// 				$("#player").css("left",recua-4);break;
-			
-// 			case TECLA.barra:
-
-// 				var spawn = parseInt($("#player").css("left")), parseInt($("#player"));
-// 				$("#player").css("left",spawn=395);
-// 				$("#player").css("top",spawn=395);break;
-
-// 		}
-// 	})
-// })
+}
