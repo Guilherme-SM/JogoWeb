@@ -1,0 +1,108 @@
+@font-face{
+	font-family: motherland;
+	src:url(../font/motherland.ttf);
+}
+@font-face{
+	font-family: boxise;
+	src:url(../font/Boxise.otf);
+}
+/*  Main */
+.container {
+	padding: 1em;
+	font-family: verdana;
+	text-align: center;
+	font-size: 16px;
+	color: white;
+	margin-left: auto;
+	margin-right: auto;
+}
+#diploma {
+	padding: 1em;
+	background-color: #000000AA;
+	border: 12px double #090c86AA;
+	font-family: gothicI;
+	text-align: center;
+	font-size: 32px;
+	color: #F90;
+	font-weight: bold;
+	width: 615px;
+	margin-left: auto;
+	margin-right: auto;
+}
+#form {
+	padding: 1em;
+	font-family: bankgothic Md BT;
+	text-align: center;
+	font-size: 18px;
+	color: #fff;
+	margin-left: auto;
+	margin-right: auto;
+}
+#menu {
+	padding: 1em;
+	background-color: #000000AA;
+	font-family: boxise;
+	text-align: center;
+	font-size: 16px;
+	color: #fff;
+	width: 615px;
+	height: 150px;
+	margin-left: auto;
+	margin-right: auto;
+}
+#button{
+	margin-top: 6px;
+	padding: 1em;
+	border-radius: 45px;
+	box-shadow: 0px 2px 0px #0065B8DD;
+	background-color: #00A1D3DD;
+	font-family: boxise;
+	text-align: center;
+	font-size: 16px;
+	color: #fff;
+	width: 200px;
+	font-weight: normal;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+/* Tutorial */
+
+#tutorial {
+	margin-top: 10px;
+	padding: 1em;
+	background-color: #000000AA;
+	font-family: bankgothic Md BT;;
+	text-align: center;
+	font-size: 18px;
+	color: #fff;
+	width: 615px;
+	height: 150px;
+	margin-left: auto;
+	margin-right: auto;
+}
+#tutorial h3, p {
+	text-align: left;
+	font-size: 16px;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+/* Planos de Fundo */
+.bg {
+	background-image: url(../img/universo.jpg);
+	background-size: cover;
+}
+
+/* Tags Customizadas - ZONA DE PERIGO */
+
+titulo {
+	padding: 2px;
+	font-size: 36px;
+	color: red;
+	width: 700px;
+	height: 185px;
+	font-family: boxise;
+	margin-left: auto;
+	margin-right: auto;
+}
