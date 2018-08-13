@@ -29,7 +29,7 @@ var TECLA = {
 
 	// Disparos
 	barra:32,
-	Z:90
+	E:69
 }
 
 var jogo = {};
@@ -94,7 +94,7 @@ function movimento() {
  			$("#player").css("left",bck+0);
  		}
  	}
- 	if (jogo.press[TECLA.barra] || jogo.press[TECLA.Z]){
+ 	if (jogo.press[TECLA.barra] || jogo.press[TECLA.E]){
 
  		tiro();
  	}
@@ -137,7 +137,7 @@ function tiro() {
 	topo = parseInt($("#player").css("top"));
 	posicaoX = parseInt($("#player").css("left"));
 	tiroX = posicaoX+50;
-	topShot = top+30;
+	topShot = topo+30;
 
 	$("#laser").show();
 	$("#laser").css("top",topShot);
@@ -150,7 +150,7 @@ function disparar() {
 	posicaoX = parseInt($("#laser").css("left"));
 	$("#laser").css("left",posicaoX+25);
 
-	if (posicaoX > 1300){
+	if (posicaoX > 1375){
  			window.clearInterval(delay);
  			delay=null;
  			$("#laser").hide();
