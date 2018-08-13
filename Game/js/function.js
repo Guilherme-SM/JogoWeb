@@ -72,7 +72,7 @@ function movimento() {
 		var desce = parseInt($("#player").css("top"));
  		$("#player").css("top",desce+3);
 
- 		if (desce >= 735){
+ 		if (desce >= 755){
  			$("#player").css("top",desce-0);
  		}
 	}
@@ -90,7 +90,7 @@ function movimento() {
 		var bck = parseInt($("#player").css("left"));
  		$("#player").css("left",bck-3);
 
- 			if (bck <= 0){
+ 			if (bck <= -10){
  			$("#player").css("left",bck+0);
  		}
  	}
@@ -110,7 +110,7 @@ function inimigo() {
 	$("#inimigo").css("left",posicaoX-5);
 
 	if (posicaoX <= 0) {
-		posicaoY1 = parseInt(Math.random()*680);
+		posicaoY1 = parseInt(Math.random()*745);
 		$("#inimigo").css("left",1320);
 		$("#inimigo").css("top",posicaoY1);
 	}
@@ -122,7 +122,7 @@ function inimigo2() {
 	$("#inimigo2").css("left",posicaoX-8);
 
 	if (posicaoX <= 0) {
-		posicaoY2 = parseInt(Math.random()*680);
+		posicaoY2 = parseInt(Math.random()*745);
 		$("#inimigo2").css("left",1320);
 		$("#inimigo2").css("top",posicaoY2);
 	}
@@ -136,8 +136,8 @@ function tiro() {
 	
 	topo = parseInt($("#player").css("top"));
 	posicaoX = parseInt($("#player").css("left"));
-	tiroX = posicaoX+50;
-	topShot = topo+30;
+	tiroX = posicaoX+80;
+	topShot = topo+20;
 
 	$("#laser").show();
 	$("#laser").css("top",topShot);
@@ -165,6 +165,10 @@ function colisao() {
 	var playerY = parseInt($("#player").css("top"))+parseInt($("#player").css("height"));
 	var playerTop = parseInt($("#player").css("top"));
 
+	var tiroX = parseInt($("#laser").css("left"))+parseInt($("#laser").css("width"));
+	var tiroBaixo = parseInt($("#laser").css("top"))+parseInt($("#laser").css("height"));
+	var tiroTop = parseInt($("#laser").css("top"));
+
 	var inimigoX = parseInt($("#inimigo").css("left"))+parseInt($("#inimigo").css("width"));
 	var inimigoY = parseInt($("#inimigo").css("top"))+parseInt($("#inimigo").css("height"));
 	var inimigoTop = parseInt($("#inimigo").css("top"));
@@ -173,12 +177,69 @@ function colisao() {
 	var inimigo2Y = parseInt($("#inimigo2").css("top"))+parseInt($("#inimigo2").css("height"));
 	var inimigo2Top = parseInt($("#inimigo2").css("top"));
 
-	if (inimigoX <= jogadorX) {
-		if (inimigoY<=inimigoY&&playerY>=inimigoTop) {
-			$("#inimigo").css("left",617);
-		posicaoY = parseInt(Math.random()*1350);
-		$("#inimigo").css("top",posicaoY1)
+	if (inimigoX <= playerX) {
+		if (inimigoY<=playerY&&inimigoY>=playerTop) {
+			$("#inimigo").css("left",1320);
+		posicaoY = parseInt(Math.random()*745);
+		$("#inimigo").css("top",posicaoY);
 		}
-
 	}
+
+	if (inimigo2X <= playerX) {
+		if (inimigo2Y<=playerY&&inimigo2Y>=playerTop) {
+			$("#inimigo2").css("left",1320);
+		posicaoY = parseInt(Math.random()*745);
+		$("#inimigo2").css("top",posicaoY);
+		}
+	}
+
+	if (tiroX >= inimigoX) {
+		if (tiroBaixo<=inimigoY&&tiroBaixo>=inimigoTop) {
+			$("#inimigo").css("left",1320);
+			posicaoY = parseInt(Math.random()*745);
+			$("#inimigo").css("top",posicaoY);
+		}
+	}
+
+	if (tiroX >= inimigo2X) {
+		if (tiroBaixo<=inimigo2Y&&tiroBaixo>=inimigo2Top) {
+			$("#inimigo").css("left",1320);
+			posicaoY = parseInt(Math.random()*745);
+			$("#inimigo").css("top",posicaoY);
+		}
+	}
+
+// Sprite - Explosão quando uma nave é destruída.
+function explosao(inimigoX,inimigoTop){
+
+	var div=$("#explosao");
+	div.css("top",inimigoTop);
+	div.css("left",inimigoX);
+	div.show();
+	div.animate({width:200,opacity:0},"slow");
+
+	var delayE=window.setInterval(explosionReset,1000);
+
+	function explosionReset(){
+		div.css("width",100);
+		div.css("height",100);
+		div.css("opacity",100);
+		div.hide();
+		window.clearInterval(delayE);
+		delayE = null;
+	}
+}
+
+function vida() {
+
+	playerPosY = parseInt($("#player").css("top"));
+	playerPosX = parseInt($("#player").css("left"));
+	hpBar = polayerPosY+0;
+	hpQuantity = playerPosX+5;
+
+	$("#energia").show();
+	$("#energia").css("top",playerPosY);
+	$("#energia").css("left",playerPosX);
+}
+
 }
