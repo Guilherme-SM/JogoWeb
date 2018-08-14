@@ -1,6 +1,3 @@
-alert("JS");
-// Funções do Jogo
-
 $(document).ready(function() {
 	
 
@@ -55,6 +52,8 @@ function loop() {
 	inimigo();
 	inimigo2();
 	colisao();
+	vida();
+	//pontuacao();
 }
 function movimento() {
 
@@ -203,12 +202,12 @@ function colisao() {
 
 	if (tiroX >= inimigo2X) {
 		if (tiroBaixo<=inimigo2Y&&tiroBaixo>=inimigo2Top) {
-			$("#inimigo").css("left",1320);
+			$("#inimigo2").css("left",1320);
 			posicaoY = parseInt(Math.random()*745);
-			$("#inimigo").css("top",posicaoY);
+			$("#inimigo2").css("top",posicaoY);
 		}
 	}
-
+}
 // Sprite - Explosão quando uma nave é destruída.
 function explosao(inimigoX,inimigoTop){
 
@@ -216,30 +215,47 @@ function explosao(inimigoX,inimigoTop){
 	div.css("top",inimigoTop);
 	div.css("left",inimigoX);
 	div.show();
-	div.animate({width:200,opacity:0},"slow");
+	div.animate({width:80,height:80,opacity:0},"slow");
 
 	var delayE=window.setInterval(explosionReset,1000);
 
 	function explosionReset(){
-		div.css("width",100);
-		div.css("height",100);
+		div.css("width",45);
+		div.css("height",45);
 		div.css("opacity",100);
 		div.hide();
 		window.clearInterval(delayE);
 		delayE = null;
 	}
 }
-
 function vida() {
-
 	playerPosY = parseInt($("#player").css("top"));
 	playerPosX = parseInt($("#player").css("left"));
-	hpBar = polayerPosY+0;
+	hpBar = playerPosY-25;
 	hpQuantity = playerPosX+5;
 
 	$("#energia").show();
-	$("#energia").css("top",playerPosY);
-	$("#energia").css("left",playerPosX);
+	$("#energia").css("top",hpBar);
+	$("#energia").css("left",hpQuantity);
+
+	var vida=$("#energia");
+
+	if (inimigoX <= playerX) {
+		if (inimigoY<=playerY&&inimigoY>=playerTop) {
+			vida.animate({width:75},{duration:3});
+		}
+	}
+
+	if (inimigo2X <= playerX) {
+		if (inimigo2Y<=playerY&&inimigo2Y>=playerTop) {
+			$("#inimigo2").css("left",1320);
+		posicaoY = parseInt(Math.random()*745);
+		$("#inimigo2").css("top",posicaoY);
+		}
+	}
 }
 
-}
+// function pontuacao() {
+// 	$("#placar").html("<h1>Score: "+ score +"</h1>");
+
+// }
