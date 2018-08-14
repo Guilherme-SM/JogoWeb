@@ -1,6 +1,3 @@
-alert("JS");
-// Funções do Jogo
-
 $(document).ready(function() {
 	
 
@@ -56,6 +53,7 @@ function loop() {
 	inimigo2();
 	colisao();
 	vida();
+	//pontuacao();
 }
 function movimento() {
 
@@ -256,3 +254,8 @@ function vida() {
 		}
 	}
 }
+
+// function pontuacao() {
+// 	$("#placar").html("<h1>Score: "+ score +"</h1>");
+
+// }
