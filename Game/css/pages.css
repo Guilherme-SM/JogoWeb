@@ -65,6 +65,21 @@
 	margin-left: auto;
 	margin-right: auto;
 }
+#button_pvp{
+	margin-top: 6px;
+	padding: 1em;
+	border-radius: 45px;
+	box-shadow: 0px 2px 0px #C70818DD;
+	background-color: #C91238DD;
+	font-family: boxise;
+	text-align: center;
+	font-size: 16px;
+	color: #fff;
+	width: 200px;
+	font-weight: normal;
+	margin-left: auto;
+	margin-right: auto;
+}
 
 /* Tutorial */
 
@@ -77,11 +92,11 @@
 	font-size: 18px;
 	color: #fff;
 	width: 615px;
-	height: 150px;
+	height: 350px;
 	margin-left: auto;
 	margin-right: auto;
 }
-#tutorial h3, p {
+#tutorial h3 {
 	text-align: left;
 	font-size: 16px;
 	margin-left: auto;

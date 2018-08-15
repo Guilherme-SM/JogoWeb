@@ -110,7 +110,7 @@ function inimigo() {
 
 	if (posicaoX <= 0) {
 		posicaoY1 = parseInt(Math.random()*745);
-		$("#inimigo").css("left",1320);
+		$("#inimigo").css("left",1330);
 		$("#inimigo").css("top",posicaoY1);
 	}
 
@@ -122,7 +122,7 @@ function inimigo2() {
 
 	if (posicaoX <= 0) {
 		posicaoY2 = parseInt(Math.random()*745);
-		$("#inimigo2").css("left",1320);
+		$("#inimigo2").css("left",1330);
 		$("#inimigo2").css("top",posicaoY2);
 	}
 
@@ -178,7 +178,7 @@ function colisao() {
 
 	if (inimigoX <= playerX) {
 		if (inimigoY<=playerY&&inimigoY>=playerTop) {
-			$("#inimigo").css("left",1320);
+			$("#inimigo").css("left",1330);
 		posicaoY = parseInt(Math.random()*745);
 		$("#inimigo").css("top",posicaoY);
 		}
@@ -186,7 +186,7 @@ function colisao() {
 
 	if (inimigo2X <= playerX) {
 		if (inimigo2Y<=playerY&&inimigo2Y>=playerTop) {
-			$("#inimigo2").css("left",1320);
+			$("#inimigo2").css("left",1330);
 		posicaoY = parseInt(Math.random()*745);
 		$("#inimigo2").css("top",posicaoY);
 		}
@@ -194,7 +194,7 @@ function colisao() {
 
 	if (tiroX >= inimigoX) {
 		if (tiroBaixo<=inimigoY&&tiroBaixo>=inimigoTop) {
-			$("#inimigo").css("left",1320);
+			$("#inimigo").css("left",1330);
 			posicaoY = parseInt(Math.random()*745);
 			$("#inimigo").css("top",posicaoY);
 		}
@@ -202,7 +202,7 @@ function colisao() {
 
 	if (tiroX >= inimigo2X) {
 		if (tiroBaixo<=inimigo2Y&&tiroBaixo>=inimigo2Top) {
-			$("#inimigo2").css("left",1320);
+			$("#inimigo2").css("left",1330);
 			posicaoY = parseInt(Math.random()*745);
 			$("#inimigo2").css("top",posicaoY);
 		}
@@ -239,20 +239,6 @@ function vida() {
 	$("#energia").css("left",hpQuantity);
 
 	var vida=$("#energia");
-
-	if (inimigoX <= playerX) {
-		if (inimigoY<=playerY&&inimigoY>=playerTop) {
-			vida.animate({width:75},{duration:3});
-		}
-	}
-
-	if (inimigo2X <= playerX) {
-		if (inimigo2Y<=playerY&&inimigo2Y>=playerTop) {
-			$("#inimigo2").css("left",1320);
-		posicaoY = parseInt(Math.random()*745);
-		$("#inimigo2").css("top",posicaoY);
-		}
-	}
 }
 
 // function pontuacao() {
