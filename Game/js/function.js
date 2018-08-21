@@ -241,7 +241,7 @@ function vida() {
 	var vida=$("#energia");
 }
 
-// function pontuacao() {
-// 	$("#placar").html("<h1>Score: "+ score +"</h1>");
+function pontuacao() {
+	$("#placar").html("<h1>Score: "+ score +"</h1>");
 
-// }
+}
